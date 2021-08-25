@@ -1,0 +1,42 @@
+{
+  "name": "koapro",
+  "version": "1.0.0",
+  "description": "koapro",
+  "main": "index.js",
+  "scripts": {
+    "start": "npm run serve",
+    "serve": "node dist/server.js",
+    "build": "npm run tslint && npm run build-ts",
+    "build-ts": "tsc",
+    "watch": "nodemon --watch ./src/* -e ts,tsx --exec ts-node ./src/server.ts",
+    "watch-ts": "tsc -w",
+    "tslint": "tslint -c tslint.json -p tsconfig.json"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@types/ioredis": "^4.26.7",
+    "@types/koa-bodyparser": "^4.3.3",
+    "@types/koa-router": "^7.4.4",
+    "@types/md5": "^2.3.1",
+    "@types/mysql": "^2.15.19",
+    "@types/redis": "^2.8.31",
+    "fs": "0.0.1-security",
+    "ioredis": "^4.27.8",
+    "koa": "^2.13.1",
+    "koa-body": "^4.2.0",
+    "koa-bodyparser": "^4.3.0",
+    "koa-router": "^10.0.0",
+    "md5": "^2.3.0",
+    "mysql": "^2.18.1",
+    "nodemon": "^2.0.12",
+    "path": "^0.12.7",
+    "redis": "^3.1.2",
+    "ts-node": "^10.2.0",
+    "typescript": "^4.3.5"
+  },
+  "devDependencies": {
+    "@types/koa": "^2.13.4",
+    "tslint": "^6.1.3"
+  }
+}
